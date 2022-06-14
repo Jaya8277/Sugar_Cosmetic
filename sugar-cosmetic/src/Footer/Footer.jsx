@@ -115,7 +115,7 @@ function Footer() {
           </div>
         </div>
         <div
-          className={styles.div4}
+          className={styles.main4}
           style={{ marginLeft: "90px", marginTop: "-5px" }}
         >
           <p style={{ color: "white", fontSize: "large" }}>INFORMATION</p>
@@ -270,6 +270,10 @@ function Footer() {
         <hr
           style={{ marginLeft: "40px", marginRight: "40px", marginTop: "42px" }}
         />
+
+        <div>
+<p style={{color: "white", fontSize:"20px"}}>Copyright © 2022 SUGAR Cosmetics. All rights reserved.</p>
+        </div>
       </div>
     </>
   );

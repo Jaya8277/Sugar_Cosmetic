@@ -47,26 +47,26 @@
     font-size: large;
     margin-top: 20px;
 }
-.div4 > div > a{
+.main4 > div > a{
     color : rgb(153 , 153 , 153) ;
     font-size : 17px ;
     text-decoration : none ;
     margin-top : 15px;
     
 }
-.div4 > div > a:hover{
+.main4 > div > a:hover{
     text-decoration: underline;
     color:white;
 }
-.div4 >  p{
+.main4 >  p{
     text-align: left;
 }
 
 .detail > p{
     color:Red;
 }
-/* 
-.maill p:hover {
 
+/* .copyright p{
     color: white;
+    font-size:20px;
 } */
