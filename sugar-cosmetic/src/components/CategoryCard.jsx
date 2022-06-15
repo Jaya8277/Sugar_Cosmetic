@@ -40,7 +40,7 @@ export const CategoryCard = () => {
   
   return (
     <>
-      <div style={{ height: "125px" }}></div>
+      <div style={{ height: "115px" }}></div>
       <Navbar />
       <div id={styles.infoContain}>
         <div id={styles.info}>
