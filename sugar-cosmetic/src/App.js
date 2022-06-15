@@ -1,12 +1,25 @@
-// import logo from './logo.svg';
-import Footer from './Footer/Footer';
-import './App.css';
+// import Footer from './Footer/Footer';
+// import { Navbar } from './Navbar/Navbar';
+
+//  import {Shopnow} from './Homepage/shopnow/Shopnow'
+
+// import { Product } from "./Homepage/Product/Product";
+
+// import { Carouselitem } from "./Homepage/Carousel/Carouselitem";
+import {Home} from "./Homepage/Home";
 
 function App() {
+  
+
   return (
-    <div className="App">
-     <Footer/>
-    </div>
+    <>
+    {/* <Shopnow shopnow={shopnow}/> */}
+    {/* <Product/> */}
+    <Home/>
+      {/* <Navbar/> */}
+     {/* <Footer/> */}
+ 
+    </>
   );
 }
 

@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,700&family=Montserrat:wght@400;700&family=Quicksand:wght@300;400&family=Ubuntu:wght@300&display=swap');
+.box1{
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    margin: 25px 0px 22px 0px;
+}
+.box2{
+    width: 92%;
+    height: auto;
+    justify-content: center;
+    margin: auto;
+    display: flex; 
+}
+.box3{
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+}
+.box3>img{
+    height: auto;
+    width: 31%;
+}
+ 
+ 
