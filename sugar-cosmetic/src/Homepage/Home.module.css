@@ -13,12 +13,12 @@
 }
 .box3{
     display: flex;
-    margin: auto;
     justify-content: space-evenly;
+    margin: auto;
 }
 .box3>img{
-    height: auto;
-    width: 31%;
+    width: 43%;
+    height: 345px;
 }
- 
+  
  
