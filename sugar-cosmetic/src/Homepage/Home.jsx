@@ -30,11 +30,11 @@ export const Home = () => {
   <h3 className={style.box1}>BESTSELLERS</h3>
    <Shopnow shopnow={Data.shopnow1} chose="SHOP NOW"/>
    <h2 className={style.box1}>QUICK BEAUTY TIPS WITH SUGAR</h2>
-   <Carouselitem carousel={Data.carousel2} mt="-0px"/>
+   <Carouselitem carousel={Data.carousel2} mt="-0px" variant="dark"/>
    <h2 className={style.box1}>HOT DEALS</h2>
    <Product dummyProduct={Data.dummyProduct1}/>
    <h2 className={style.box1}>NEWLY LAUNCHED</h2>
-   <Carouselitem carousel={Data.carousel3}/>
+   <Carouselitem carousel={Data.carousel3} variant="dark"/>
    <h2 className={style.box1}>SUPER SAVERS</h2>   
    <Shopnow shopnow={Data.shopnow2} chose="CHOOSE PRODUCTS"/>
    <h2 className={style.box1}>TOP PICKS OF THE WEEK</h2>
