@@ -64,7 +64,7 @@ export const Navbar = () => {
             <h3 className={style.dropbtn}>
               <Link
                 style={{
-  
+
                   color: "gray",
                   textDecoration: "none",
                 }}
@@ -77,7 +77,7 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-    
+
                     color: "gray",
                     textDecoration: "none",
                   }}
@@ -89,7 +89,7 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-    
+
                     color: "gray",
                     textDecoration: "none",
                   }}
@@ -101,7 +101,7 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-    
+
                     color: "gray",
                     textDecoration: "none",
                   }}
@@ -116,7 +116,7 @@ export const Navbar = () => {
             <h3 className={style.dropbtn}>
               <Link
                 style={{
-  
+
                   color: "gray",
                   textDecoration: "none",
                 }}
@@ -129,7 +129,7 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-    
+
                     color: "gray",
                     textDecoration: "none",
                   }}
@@ -141,7 +141,7 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-    
+
                     color: "gray",
                     textDecoration: "none",
                   }}
@@ -156,7 +156,7 @@ export const Navbar = () => {
             <h3 className={style.dropbtn}>
               <Link
                 style={{
-  
+
                   color: "gray",
                   textDecoration: "none",
                 }}
@@ -169,7 +169,7 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-    
+
                     color: "gray",
                     textDecoration: "none",
                   }}
@@ -181,7 +181,7 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-    
+
                     color: "gray",
                     textDecoration: "none",
                   }}
@@ -193,7 +193,7 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-    
+
                     color: "gray",
                     textDecoration: "none",
                   }}
@@ -205,7 +205,7 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-    
+
                     color: "gray",
                     textDecoration: "none",
                   }}
@@ -217,7 +217,7 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-    
+
                     color: "gray",
                     textDecoration: "none",
                   }}
@@ -229,7 +229,7 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-    
+
                     color: "gray",
                     textDecoration: "none",
                   }}
@@ -241,7 +241,7 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-    
+
                     color: "gray",
                     textDecoration: "none",
                   }}
@@ -253,7 +253,7 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-    
+
                     color: "gray",
                     textDecoration: "none",
                   }}
@@ -268,7 +268,7 @@ export const Navbar = () => {
             <h3 className={style.dropbtn}>
               <Link
                 style={{
-  
+
                   color: "gray",
                   textDecoration: "none",
                 }}
@@ -281,7 +281,7 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-    
+
                     color: "gray",
                     textDecoration: "none",
                   }}
@@ -293,7 +293,7 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-    
+
                     color: "gray",
                     textDecoration: "none",
                   }}
@@ -305,7 +305,7 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-    
+
                     color: "gray",
                     textDecoration: "none",
                   }}
@@ -317,7 +317,7 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-    
+
                     color: "gray",
                     textDecoration: "none",
                   }}
@@ -329,7 +329,7 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-    
+
                     color: "gray",
                     textDecoration: "none",
                   }}
@@ -344,7 +344,7 @@ export const Navbar = () => {
             <h3 className={style.dropbtn}>
               <Link
                 style={{
-  
+
                   color: "gray",
                   textDecoration: "none",
                 }}
@@ -357,7 +357,7 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-    
+
                     color: "gray",
                     textDecoration: "none",
                   }}
@@ -369,7 +369,7 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-    
+
                     color: "gray",
                     textDecoration: "none",
                   }}
@@ -381,7 +381,7 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-    
+
                     color: "gray",
                     textDecoration: "none",
                   }}
@@ -396,7 +396,7 @@ export const Navbar = () => {
             <h3 className={style.dropbtn}>
               <Link
                 style={{
-  
+
                   color: "gray",
                   textDecoration: "none",
                 }}
@@ -422,4 +422,4 @@ export const Navbar = () => {
       </div>
     </>
   );
-};
+}
