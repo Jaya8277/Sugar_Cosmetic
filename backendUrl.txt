@@ -21,4 +21,6 @@
        for getting data on specfic catagory and on decreasing order by price from server.
        https://sugarcosmetic201.herokuapp.com/products/get/dec/?catg= __Any Catagory__
 
-
+* Searching the data by name 
+       
+       https://sugarcosmetic201.herokuapp.com/products/search/:query
