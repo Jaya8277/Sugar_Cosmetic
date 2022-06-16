@@ -257,7 +257,7 @@ function Footer() {
             </p>
             <p
               style={{
-                fontSize: "17px",
+                fontSize: "1rem",
                 color: "rgb(153,153,153)",
                 textDecoration: "none",
                 textAlign: "left",
