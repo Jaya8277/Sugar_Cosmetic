@@ -1,20 +1,13 @@
 import React from "react"
-// import Footer from './Footer/Footer';
-// import { Navbar } from "./Navbar/Navbar";
-//  import {Shopnow} from './Homepage/shopnow/Shopnow'
-// import { Product } from "./Homepage/Product/Product";
-// import { Carouselitem } from "./Homepage/Carousel/Carouselitem";
-import {Home} from "./Homepage/Home";
+import { Home } from "./Homepage/Home";
+import { MainRoutes } from "./Routes/MainRoutes";
 
 function App() {
   return (
-    <>
-    {/* <Shopnow shopnow={shopnow}/> */}
-    {/* <Product/> */}
-    <Home/>
-    {/* <Navbar/> */}
-    {/* <Footer/> */}
-    </>
+    <div className="App">
+      <Home/>
+      <MainRoutes />
+    </div>
   );
 }
 

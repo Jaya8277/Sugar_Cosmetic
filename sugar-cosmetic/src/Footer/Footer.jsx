@@ -22,14 +22,7 @@ function Footer() {
             />
           </a>
 
-          {/* <a href="https://www.mail.com/trySUGAR/" alt="/">
-            <img
-              className={styles.imgmain1}
-              src=""
-              alt=""
-            />
-          </a> */}
-
+        
           <a href="https://www.instagram.com/trysugar/?hl=en" alt="/">
             <img
               className={styles.imgmain1}

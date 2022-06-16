@@ -1,0 +1,24 @@
+* catg : 
+         1. makeup
+         2. Lips
+         3. Face
+         4. skincare
+         5. brushes
+         6. treanding
+         7. merchStation
+         8. offers
+
+        for getting data on specfic catagory from server.
+*       https://sugarcosmetic201.herokuapp.com/products/get?catg=  __Any Catagory__
+       
+
+* sorting catg 
+
+       for getting data on specfic catagory and on increasing order by price  from server.
+       https://sugarcosmetic201.herokuapp.com/products/get/inc/?catg= __Any Catagory__
+
+
+       for getting data on specfic catagory and on decreasing order by price from server.
+       https://sugarcosmetic201.herokuapp.com/products/get/dec/?catg= __Any Catagory__
+
+
