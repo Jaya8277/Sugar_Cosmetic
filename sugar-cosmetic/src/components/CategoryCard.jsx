@@ -7,44 +7,40 @@ import axios from "axios";
 import { Navbar } from "../Navbar/Navbar";
 export const CategoryCard = () => {
   const { category } = useParams();
-  const [products,setProducts] = useState([]);
-  console.log(category);
-  
+  const [products, setProducts] = useState([]);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-    useEffect(() => {
-      axios
-        .get(
-          `https://sugarcosmetic201.herokuapp.com/products/get?catg=${category}`,
-        )
-        .then((res) => {
-          setProducts(res.data);
-          console.log(products);
-        })
-        .catch((err) => err.message);
-        
-    },[category]);
+  useEffect(() => {
+    axios
+      .get(
+        `https://sugarcosmetic201.herokuapp.com/products/get?catg=${category}`,
+      )
+      .then((res) => {
+        setProducts(res.data);
+      })
+      .catch((err) => err.message);
+  }, [category]);
 
-   const handleSort = (e) => {
-     let data1 = products.sort((a, b) => {
-       if (e.target.value === "asc") {
-         return a.price - b.price;
-       } else {
-         return b.price - a.price;
-       }
-     });
-     let newUpdatedData = data1.map((elem) => elem);
-     setProducts(newUpdatedData);
-   }; 
+  const handleSort = (e) => {
+    let data1 = products.sort((a, b) => {
+      if (e.target.value === "asc") {
+        return a.price - b.price;
+      } else {
+        return b.price - a.price;
+      }
+    });
+    let newUpdatedData = data1.map((elem) => elem);
+    setProducts(newUpdatedData);
+  };
 
-
-  
   return (
     <>
       <div style={{ height: "115px" }}></div>
       <Navbar />
       <div id={styles.infoContain}>
         <div id={styles.info}>
-          <h1 id={styles.h1} style={{marginRight:"10px"}}>{category} </h1>
+          <h1 id={styles.h1} style={{ marginRight: "10px" }}>
+            {category}{" "}
+          </h1>
           <p id={styles.items}>{products.length} items</p>
         </div>
 

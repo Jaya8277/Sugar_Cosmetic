@@ -3,7 +3,9 @@
 import { Flex } from './Styled';
 import React, { useEffect, useState } from "react";
 import styles from "./Products.module.css";
-export const ProductCard = ({  name,rating, id, image, price }) => {
+import {useNavigate } from 'react-router-dom';
+export const ProductCard = ({  name,rating, id, image, price,_id }) => {
+   const nav = useNavigate();
   const [review, setReview] = useState(0);
  
     useEffect(() => {
@@ -13,7 +15,7 @@ export const ProductCard = ({  name,rating, id, image, price }) => {
   return (
     <>
       <Flex data-testid="single-product-item" key={id}>
-        <div id={styles.unit}>
+        <div id={styles.unit} onClick={() => nav(`/product/category/${_id}`)} style={{cursor:"pointer"}}>
           <img id={styles.img} src={image} />
           <p id={styles.name}>{name}</p>
           <p id={styles.price}>RS .{price}</p>
@@ -30,9 +32,7 @@ export const ProductCard = ({  name,rating, id, image, price }) => {
           </div>
 
           <div id={styles.btnHold}>
-          
             <button>
-           
               <img
                 className={styles.whislisticon}
                 src="https://cdn3.iconfinder.com/data/icons/marketing-e-commerce/128/icons_-_marketing-41-512.png"
