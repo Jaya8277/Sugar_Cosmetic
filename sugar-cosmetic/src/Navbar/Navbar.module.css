@@ -77,6 +77,10 @@
     border: none;
     margin-top:18px ;
     margin-left: 40px;
+    transition: transform 0.5s, opacity 0.10s;
+  }
+  .dropbtn:hover{
+    transform: scale(1.05);
   }
   
   .dropdown {
@@ -88,7 +92,7 @@
     display: none;
     position: absolute;
     background-color: #fffdfd;
-    min-width: 140px;
+    min-width: 130px;
     margin-left: 30px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 99;
@@ -101,6 +105,7 @@
     text-decoration: none;
     display: block;
     cursor: pointer;
+    line-height: 14px;
   }
   
   .content p:hover {

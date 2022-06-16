@@ -1,16 +1,11 @@
-// import Footer from './Footer/Footer';
-// 
-
-//  import {Shopnow} from './Homepage/shopnow/Shopnow'
-
-// import { Product } from "./Homepage/Product/Product";
-
-// import { Carouselitem } from "./Homepage/Carousel/Carouselitem";
+import React from "react"
+import { Home } from "./Homepage/Home";
 import { MainRoutes } from "./Routes/MainRoutes";
 
 function App() {
   return (
     <div className="App">
+      <Home/>
       <MainRoutes />
     </div>
   );
