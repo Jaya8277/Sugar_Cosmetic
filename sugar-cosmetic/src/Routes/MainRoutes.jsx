@@ -5,6 +5,7 @@ import { Navbar } from "../Navbar/Navbar";
 import { CategoryCard } from '../components/CategoryCard';
 import {DivCard} from "../components/DivCard"
 import { Home } from '../Homepage/Home';
+import { SearchCard } from '../components/SearchCard';
 const MainRoutes = () => {
   return (
     <>
@@ -13,6 +14,7 @@ const MainRoutes = () => {
         <Route path="/" element={<Home />} />
         <Route path="/products/:category" element={<CategoryCard />} />
         <Route path="/product/category/:_id" element={<DivCard/>} />
+        <Route path="/products/search/:category" element={<SearchCard/>}/>
       </Routes>
     </>
   );

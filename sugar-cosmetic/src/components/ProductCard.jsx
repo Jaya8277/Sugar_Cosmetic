@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./Products.module.css";
 import {useNavigate } from 'react-router-dom';
 export const ProductCard = ({  name,rating, id, image, price,_id }) => {
-   const {nav} = useNavigate();
+   const nav = useNavigate();
   const [review, setReview] = useState(0);
  
     useEffect(() => {
