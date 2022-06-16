@@ -3,22 +3,12 @@ import { BsFillPersonFill } from "react-icons/bs";
 import { MdFavorite } from "react-icons/md";
 import { IoBagHandle } from "react-icons/io5";
 import style from "./Navbar.module.css";
-import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link ,useNavigate} from "react-router-dom";
+
 
 export const Navbar = () => {
+  const nav  = useNavigate();
   const [value, setValue] = useState("");
-  const [products, setProducts] = useState([]);
-  const handleSearch = (e) => {
-    setValue(e.target.value);
-    axios
-      .get(`https://sugarcosmetic201.herokuapp.com/products/get`)
-      .then((res) => {
-        setProducts(res.data);
-        console.log(products);
-      })
-      .catch((err) => err.message);
-  };
   return (
     <>
       <div className={style.mainContainer}>
@@ -42,9 +32,9 @@ export const Navbar = () => {
               type="text"
               value={value}
               placeholder='Try "Liquid Lipstick"'
-              onChange={handleSearch}
+              onChange={(e)=>setValue(e.target.value)}
             />
-            <button>Search</button>
+            <button onClick={() => nav(`/products/${value}`)}>Search</button>
           </div>
           <div className={style.box4}>
             <BsFillPersonFill fontSize="20px" />
