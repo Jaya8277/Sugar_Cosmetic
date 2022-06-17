@@ -22,7 +22,6 @@ function Footer() {
             />
           </a>
 
-        
           <a href="https://www.instagram.com/trysugar/?hl=en" alt="/">
             <img
               className={styles.imgmain1}
@@ -261,8 +260,9 @@ function Footer() {
           </div>
         </div>
         <hr
-          style={{ marginLeft: "40px", marginRight: "40px", marginTop: "42px" }}
+          style={{ marginLeft: "40px", marginRight: "40px", marginTop: "42px",border:"1px solid white" }}
         />
+        <center className={styles.center}>Copyright © 2022 SUGAR Cosmetics. All rights reserved.</center>
       </div>
     </>
   );

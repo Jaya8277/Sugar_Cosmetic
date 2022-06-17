@@ -29,7 +29,7 @@ export const ProductCard = ({  name,rating, id, image, price,_id }) => {
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuW-ijbF7ZlfvwARw20McEOaUkKA_HdCK7vA&usqp=CAU"
               alt=""
             />
-            <p id={styles.rating}>
+            <p id={styles.rating} style={{ marginLeft: "-7px" }}>
               {rating} ({review}){" "}
             </p>
           </div>

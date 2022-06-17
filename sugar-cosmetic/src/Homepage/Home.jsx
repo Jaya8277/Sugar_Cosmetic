@@ -52,7 +52,6 @@ export const Home = () => {
    <Shopnow shopnow={Data.shopnow4} chose="SELECT SHADE"/>
    <h2 className={style.box1}>EXPLORE</h2>  
    <Product dummyProduct={Data.dummyProduct4} count={4} />
-   <Footer/>
  </>)
 }
 
