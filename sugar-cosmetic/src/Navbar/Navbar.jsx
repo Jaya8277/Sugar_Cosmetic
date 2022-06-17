@@ -3,11 +3,11 @@ import { BsFillPersonFill } from "react-icons/bs";
 import { MdFavorite } from "react-icons/md";
 import { IoBagHandle } from "react-icons/io5";
 import style from "./Navbar.module.css";
-import { Link ,useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 export const Navbar = () => {
-  const nav  = useNavigate();
+  const nav = useNavigate();
   const [value, setValue] = useState("");
   return (
     <>
@@ -15,7 +15,7 @@ export const Navbar = () => {
         <div className={style.box1}>
           <Link
             style={{
-              color: "gray",
+              color: "black",
               textDecoration: "none",
             }}
             to="/"
@@ -32,7 +32,7 @@ export const Navbar = () => {
               type="text"
               value={value}
               placeholder='Try "Liquid Lipstick"'
-              onChange={(e)=>setValue(e.target.value)}
+              onChange={(e) => setValue(e.target.value)}
             />
             <button onClick={() => nav(`/products/search/${value}`)}>Search</button>
           </div>
@@ -41,12 +41,12 @@ export const Navbar = () => {
             <u>Login/Register</u>
           </div>
           <div className={style.box5}>
-            <MdFavorite fontSize="20px" />
-            <IoBagHandle fontSize="20px" />
-            <img
+            <p><MdFavorite fontSize="20px" /></p>
+            <p><Link style={{color: "black",textDecoration: "none"}} to="/Cart"><IoBagHandle fontSize="20px"/></Link><span style={{border:'1px solid gray',borderRadius:"50px",fontSize:"14px"}}>10</span></p>
+            <p><img
               src="	https://in.sugarcosmetics.com/desc-images/discountIcon.svg"
               alt=""
-            />
+            /></p>
           </div>
         </div>
         <div className={style.container}>
@@ -55,7 +55,7 @@ export const Navbar = () => {
               <Link
                 style={{
 
-                  color: "gray",
+                  color: "black",
                   textDecoration: "none",
                 }}
                 to="/products/makeup"
@@ -68,7 +68,7 @@ export const Navbar = () => {
                 <Link
                   style={{
 
-                    color: "gray",
+                    color: "black",
                     textDecoration: "none",
                   }}
                   to="/products/Lips"
@@ -80,7 +80,7 @@ export const Navbar = () => {
                 <Link
                   style={{
 
-                    color: "gray",
+                    color: "black",
                     textDecoration: "none",
                   }}
                   to="/products/Face"
@@ -92,7 +92,7 @@ export const Navbar = () => {
                 <Link
                   style={{
 
-                    color: "gray",
+                    color: "black",
                     textDecoration: "none",
                   }}
                   to="/products/Face"
@@ -107,7 +107,7 @@ export const Navbar = () => {
               <Link
                 style={{
 
-                  color: "gray",
+                  color: "black",
                   textDecoration: "none",
                 }}
                 to="/products/brushes"
@@ -120,7 +120,7 @@ export const Navbar = () => {
                 <Link
                   style={{
 
-                    color: "gray",
+                    color: "black",
                     textDecoration: "none",
                   }}
                   to="/products/brushes"
@@ -132,7 +132,7 @@ export const Navbar = () => {
                 <Link
                   style={{
 
-                    color: "gray",
+                    color: "black",
                     textDecoration: "none",
                   }}
                   to="/products/brushes"
@@ -147,7 +147,7 @@ export const Navbar = () => {
               <Link
                 style={{
 
-                  color: "gray",
+                  color: "black",
                   textDecoration: "none",
                 }}
                 to="/products/skincare"
@@ -160,7 +160,7 @@ export const Navbar = () => {
                 <Link
                   style={{
 
-                    color: "gray",
+                    color: "black",
                     textDecoration: "none",
                   }}
                   to="/products/skincare"
@@ -172,7 +172,7 @@ export const Navbar = () => {
                 <Link
                   style={{
 
-                    color: "gray",
+                    color: "black",
                     textDecoration: "none",
                   }}
                   to="/products/skincare"
@@ -184,7 +184,7 @@ export const Navbar = () => {
                 <Link
                   style={{
 
-                    color: "gray",
+                    color: "black",
                     textDecoration: "none",
                   }}
                   to="/products/skincare"
@@ -196,7 +196,7 @@ export const Navbar = () => {
                 <Link
                   style={{
 
-                    color: "gray",
+                    color: "black",
                     textDecoration: "none",
                   }}
                   to="/products/skincare"
@@ -208,7 +208,7 @@ export const Navbar = () => {
                 <Link
                   style={{
 
-                    color: "gray",
+                    color: "black",
                     textDecoration: "none",
                   }}
                   to="/products/skincare"
@@ -220,7 +220,7 @@ export const Navbar = () => {
                 <Link
                   style={{
 
-                    color: "gray",
+                    color: "black",
                     textDecoration: "none",
                   }}
                   to="/products/skincare"
@@ -232,7 +232,7 @@ export const Navbar = () => {
                 <Link
                   style={{
 
-                    color: "gray",
+                    color: "black",
                     textDecoration: "none",
                   }}
                   to="/products/skincare"
@@ -244,7 +244,7 @@ export const Navbar = () => {
                 <Link
                   style={{
 
-                    color: "gray",
+                    color: "black",
                     textDecoration: "none",
                   }}
                   to="/products/skincare"
@@ -259,7 +259,7 @@ export const Navbar = () => {
               <Link
                 style={{
 
-                  color: "gray",
+                  color: "black",
                   textDecoration: "none",
                 }}
                 to="/products/treanding"
@@ -272,7 +272,7 @@ export const Navbar = () => {
                 <Link
                   style={{
 
-                    color: "gray",
+                    color: "black",
                     textDecoration: "none",
                   }}
                   to="/products/merchStation"
@@ -284,7 +284,7 @@ export const Navbar = () => {
                 <Link
                   style={{
 
-                    color: "gray",
+                    color: "black",
                     textDecoration: "none",
                   }}
                   to="/products/makeup"
@@ -296,7 +296,7 @@ export const Navbar = () => {
                 <Link
                   style={{
 
-                    color: "gray",
+                    color: "black",
                     textDecoration: "none",
                   }}
                   to="/products/treanding"
@@ -308,7 +308,7 @@ export const Navbar = () => {
                 <Link
                   style={{
 
-                    color: "gray",
+                    color: "black",
                     textDecoration: "none",
                   }}
                   to="/products/offers"
@@ -320,7 +320,7 @@ export const Navbar = () => {
                 <Link
                   style={{
 
-                    color: "gray",
+                    color: "black",
                     textDecoration: "none",
                   }}
                   to="/products/skincare"
@@ -335,7 +335,7 @@ export const Navbar = () => {
               <Link
                 style={{
 
-                  color: "gray",
+                  color: "black",
                   textDecoration: "none",
                 }}
                 to="/products/merchStation"
@@ -348,7 +348,7 @@ export const Navbar = () => {
                 <Link
                   style={{
 
-                    color: "gray",
+                    color: "black",
                     textDecoration: "none",
                   }}
                   to="/products/brushes"
@@ -360,7 +360,7 @@ export const Navbar = () => {
                 <Link
                   style={{
 
-                    color: "gray",
+                    color: "black",
                     textDecoration: "none",
                   }}
                   to="/products/makeup"
@@ -372,7 +372,7 @@ export const Navbar = () => {
                 <Link
                   style={{
 
-                    color: "gray",
+                    color: "black",
                     textDecoration: "none",
                   }}
                   to="/products/skincare"
@@ -387,7 +387,7 @@ export const Navbar = () => {
               <Link
                 style={{
 
-                  color: "gray",
+                  color: "black",
                   textDecoration: "none",
                 }}
                 to="/products/offers"
@@ -401,7 +401,7 @@ export const Navbar = () => {
               className={style.dropbtn}
               style={{
 
-                color: "gray",
+                color: "black",
                 textDecoration: "none",
               }}
             >
