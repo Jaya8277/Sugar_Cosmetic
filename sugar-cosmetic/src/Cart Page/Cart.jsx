@@ -9,7 +9,7 @@ import { MdShoppingBag } from 'react-icons/md'
 import { GrDeliver } from 'react-icons/gr'
 import { BsTagFill } from 'react-icons/bs'
 import { TbFileDollar } from 'react-icons/tb'
-import Footer from '../Footer/Footer'
+// import Footer from '../Footer/Footer'
 
 
 
@@ -136,6 +136,6 @@ export const Cart = () => {
         </div>
       </div>
     </div>
-    <Footer/>
+    {/* <Footer/> */}
   </>)
 }
