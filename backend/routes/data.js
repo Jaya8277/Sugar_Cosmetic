@@ -16,6 +16,23 @@ dataRouter.post("/new", async (req, res) => {
   });
 });
 
+dataRouter.get("/search/:query", async (req, res) => {
+  var query = req.params.query;
+  Products.find({
+    name : {
+      $regex: query,
+    },
+  })
+    .limit(10)
+    .exec((err, succ) => {
+      if (err) {
+        return res.status.apply(500).send(err);
+      } else {
+        return res.status(201).send(succ);
+      }
+    });
+});
+
 dataRouter.get("/get/?", async (req, res) => {
   Products.find(req.query).exec((err, succ) => {
     if (err) {

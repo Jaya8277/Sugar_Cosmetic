@@ -34,7 +34,7 @@ export const Navbar = () => {
               placeholder='Try "Liquid Lipstick"'
               onChange={(e) => setValue(e.target.value)}
             />
-            <button onClick={() => nav(`/products/${value}`)}>Search</button>
+            <button onClick={() => nav(`/products/search/${value}`)}>Search</button>
           </div>
           <div className={style.box4}>
             <BsFillPersonFill fontSize="20px" />
