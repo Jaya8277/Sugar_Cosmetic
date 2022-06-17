@@ -7,7 +7,7 @@ import {useNavigate } from 'react-router-dom';
 export const ProductCard = ({  name,rating, id, image, price,_id }) => {
    const nav = useNavigate();
   const [review, setReview] = useState(0);
- 
+  //  const { image, rating, price, name, id, catg } = item;
     useEffect(() => {
       let rand = Math.floor(Math.random() * 1000);
       setReview(rand);
@@ -15,8 +15,11 @@ export const ProductCard = ({  name,rating, id, image, price,_id }) => {
   return (
     <>
       <Flex data-testid="single-product-item" key={id}>
-        <div id={styles.unit} onClick={() => nav(`/product/category/${_id}`)} style={{cursor:"pointer"}}>
-          <img id={styles.img} src={image} />
+        <div id={styles.unit} style={{ cursor: "pointer" }}>
+          <div onClick={() => nav(`/product/category/${_id}`)}>
+            {" "}
+            <img id={styles.img} src={image} />
+          </div>
           <p id={styles.name}>{name}</p>
           <p id={styles.price}>RS .{price}</p>
 
@@ -38,6 +41,7 @@ export const ProductCard = ({  name,rating, id, image, price,_id }) => {
                 src="https://cdn3.iconfinder.com/data/icons/marketing-e-commerce/128/icons_-_marketing-41-512.png"
               />
             </button>
+            {/*  onClick={() => handleClick(item)} */}
             <button id={styles.btn}>Add to Cart</button>
           </div>
         </div>

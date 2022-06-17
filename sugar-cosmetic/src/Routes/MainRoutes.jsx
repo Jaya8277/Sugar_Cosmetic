@@ -6,6 +6,7 @@ import { CategoryCard } from '../components/CategoryCard';
 import {DivCard} from "../components/DivCard"
 import { Home } from '../Homepage/Home';
 import { SearchCard } from '../components/SearchCard';
+import Footer from '../Footer/Footer';
 const MainRoutes = () => {
   return (
     <>
@@ -16,6 +17,7 @@ const MainRoutes = () => {
         <Route path="/product/category/:_id" element={<DivCard/>} />
         <Route path="/products/search/:category" element={<SearchCard/>}/>
       </Routes>
+      <Footer/>
     </>
   );
 };
