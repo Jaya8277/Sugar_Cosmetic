@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { BsFillPersonFill } from "react-icons/bs";
 import { MdFavorite } from "react-icons/md";
 import { IoBagHandle } from "react-icons/io5";
 import style from "./Navbar.module.css";
 import { Link, useNavigate } from "react-router-dom";
-
+import { CartContext } from "../ContextApi/CartStorage";
 
 export const Navbar = () => {
   const nav = useNavigate();
   const [value, setValue] = useState("");
+  const { Cart } = useContext(CartContext);
   return (
     <>
       <div className={style.mainContainer}>
@@ -34,19 +35,41 @@ export const Navbar = () => {
               placeholder='Try "Liquid Lipstick"'
               onChange={(e) => setValue(e.target.value)}
             />
-            <button onClick={() => nav(`/products/search/${value}`)}>Search</button>
+            <button onClick={() => nav(`/products/search/${value}`)}>
+              Search
+            </button>
           </div>
           <div className={style.box4}>
             <BsFillPersonFill fontSize="20px" />
             <u>Login/Register</u>
           </div>
           <div className={style.box5}>
-            <p><MdFavorite fontSize="20px" /></p>
-            <p><Link style={{color: "black",textDecoration: "none"}} to="/Cart"><IoBagHandle fontSize="20px"/></Link><span style={{border:'1px solid gray',borderRadius:"50px",fontSize:"14px"}}>10</span></p>
-            <p><img
-              src="	https://in.sugarcosmetics.com/desc-images/discountIcon.svg"
-              alt=""
-            /></p>
+            <p>
+              <MdFavorite fontSize="20px" />
+            </p>
+            <p>
+              <Link
+                style={{ color: "black", textDecoration: "none" }}
+                to="/Cart"
+              >
+                <IoBagHandle fontSize="20px" />
+              </Link>
+              <span
+                style={{
+                  border: "1px solid gray",
+                  borderRadius: "50px",
+                  fontSize: "14px",
+                }}
+              >
+                {Cart.length}
+              </span>
+            </p>
+            <p>
+              <img
+                src="	https://in.sugarcosmetics.com/desc-images/discountIcon.svg"
+                alt=""
+              />
+            </p>
           </div>
         </div>
         <div className={style.container}>
@@ -54,7 +77,6 @@ export const Navbar = () => {
             <h3 className={style.dropbtn}>
               <Link
                 style={{
-
                   color: "black",
                   textDecoration: "none",
                 }}
@@ -67,7 +89,6 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-
                     color: "black",
                     textDecoration: "none",
                   }}
@@ -79,7 +100,6 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-
                     color: "black",
                     textDecoration: "none",
                   }}
@@ -91,7 +111,6 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-
                     color: "black",
                     textDecoration: "none",
                   }}
@@ -106,7 +125,6 @@ export const Navbar = () => {
             <h3 className={style.dropbtn}>
               <Link
                 style={{
-
                   color: "black",
                   textDecoration: "none",
                 }}
@@ -119,7 +137,6 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-
                     color: "black",
                     textDecoration: "none",
                   }}
@@ -131,7 +148,6 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-
                     color: "black",
                     textDecoration: "none",
                   }}
@@ -146,7 +162,6 @@ export const Navbar = () => {
             <h3 className={style.dropbtn}>
               <Link
                 style={{
-
                   color: "black",
                   textDecoration: "none",
                 }}
@@ -159,7 +174,6 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-
                     color: "black",
                     textDecoration: "none",
                   }}
@@ -171,7 +185,6 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-
                     color: "black",
                     textDecoration: "none",
                   }}
@@ -183,7 +196,6 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-
                     color: "black",
                     textDecoration: "none",
                   }}
@@ -195,7 +207,6 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-
                     color: "black",
                     textDecoration: "none",
                   }}
@@ -207,7 +218,6 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-
                     color: "black",
                     textDecoration: "none",
                   }}
@@ -219,7 +229,6 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-
                     color: "black",
                     textDecoration: "none",
                   }}
@@ -231,7 +240,6 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-
                     color: "black",
                     textDecoration: "none",
                   }}
@@ -243,7 +251,6 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-
                     color: "black",
                     textDecoration: "none",
                   }}
@@ -258,7 +265,6 @@ export const Navbar = () => {
             <h3 className={style.dropbtn}>
               <Link
                 style={{
-
                   color: "black",
                   textDecoration: "none",
                 }}
@@ -271,7 +277,6 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-
                     color: "black",
                     textDecoration: "none",
                   }}
@@ -283,7 +288,6 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-
                     color: "black",
                     textDecoration: "none",
                   }}
@@ -295,7 +299,6 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-
                     color: "black",
                     textDecoration: "none",
                   }}
@@ -307,7 +310,6 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-
                     color: "black",
                     textDecoration: "none",
                   }}
@@ -319,7 +321,6 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-
                     color: "black",
                     textDecoration: "none",
                   }}
@@ -334,7 +335,6 @@ export const Navbar = () => {
             <h3 className={style.dropbtn}>
               <Link
                 style={{
-
                   color: "black",
                   textDecoration: "none",
                 }}
@@ -347,7 +347,6 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-
                     color: "black",
                     textDecoration: "none",
                   }}
@@ -359,7 +358,6 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-
                     color: "black",
                     textDecoration: "none",
                   }}
@@ -371,7 +369,6 @@ export const Navbar = () => {
               <p>
                 <Link
                   style={{
-
                     color: "black",
                     textDecoration: "none",
                   }}
@@ -386,7 +383,6 @@ export const Navbar = () => {
             <h3 className={style.dropbtn}>
               <Link
                 style={{
-
                   color: "black",
                   textDecoration: "none",
                 }}
@@ -400,7 +396,6 @@ export const Navbar = () => {
             <h3
               className={style.dropbtn}
               style={{
-
                 color: "black",
                 textDecoration: "none",
               }}
@@ -412,4 +407,4 @@ export const Navbar = () => {
       </div>
     </>
   );
-}
+};
