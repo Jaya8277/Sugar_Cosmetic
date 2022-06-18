@@ -8,9 +8,6 @@ import { Home } from '../Homepage/Home';
 import { Cart } from '../Cart Page/Cart';
 import { SearchCard } from '../components/SearchCard';
 import Footer from '../Footer/Footer';
-import SinginModal from '../Navbar/Modal';
-import Signin from '../Navbar/Signin';
-
 const MainRoutes = () => {
   return (
     <>
@@ -23,8 +20,6 @@ const MainRoutes = () => {
         <Route path="/products/search/:category" element={<SearchCard/>}/>
       </Routes>
       <Footer/>
-   
-     
     </>
   );
 };
