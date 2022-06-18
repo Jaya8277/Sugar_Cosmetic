@@ -45,7 +45,7 @@ export const Navbar = () => {
           </div>
           <div className={style.box5}>
             <span><MdFavorite fontSize="20px" /></span>
-            <span><Link style={{color: "black",textDecoration: "none"}} to="/Cart"><IoBagHandle fontSize="20px"/></Link><span style={{border:'1px solid gray',borderRadius:"50px",fontSize:"14px"}}>{Cart.length}</span></span>
+            <span style={{marginRight:"8px"}}><Link style={{color: "black",textDecoration: "none"}} to="/Cart"><IoBagHandle fontSize="20px"/></Link>{Cart.length>0 && <span style={{border:'1px solid gray',borderRadius:"50px",fontSize:"14px"}}>{Cart.length}</span>}</span>
             <span><img
               src="	https://in.sugarcosmetics.com/desc-images/discountIcon.svg"
               alt=""
