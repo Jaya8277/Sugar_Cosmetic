@@ -23,13 +23,13 @@ const MiniCart = ({ name, rating, id, image, price, _id }) => {
        setAmount(ans);
     }
      else{
-      remove();
+      remove(_id);
      }
   }, [count]);
 
 
 
-  const remove = () => {
+  const remove = (_id) => {
     const filtered = Cart.filter((item) => item._id !== _id);
       setCart(filtered);
     let ans = 0;
@@ -43,7 +43,7 @@ const MiniCart = ({ name, rating, id, image, price, _id }) => {
         <h6>{name}</h6>
       </div>
       <div className={style.Box6}>
-        <p className={style.delete} onClick={() => remove()}>
+        <p className={style.delete} onClick={() => remove(_id)}>
           <MdDelete size="20px" />
         </p>
         <p
