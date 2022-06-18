@@ -1,19 +1,18 @@
-import React,{useContext, useEffect} from 'react'
-import style from './Cart.module.css'
-import { GrCart } from 'react-icons/gr'
-import { BsFillCalculatorFill } from 'react-icons/bs'
-import { MdShoppingBag } from 'react-icons/md'
-import { GrDeliver } from 'react-icons/gr'
-import { BsTagFill } from 'react-icons/bs'
-import { TbFileDollar } from 'react-icons/tb'
+import React, { useContext, useEffect } from "react";
+import style from "./Cart.module.css";
+import { GrCart } from "react-icons/gr";
+import { BsFillCalculatorFill } from "react-icons/bs";
+import { MdShoppingBag } from "react-icons/md";
+import { GrDeliver } from "react-icons/gr";
+import { BsTagFill } from "react-icons/bs";
+import { TbFileDollar } from "react-icons/tb";
 import { CartContext } from "../ContextApi/CartStorage";
-import MiniCart from './MiniCart'
-
-
+import MiniCart from "./MiniCart";
+import { Link } from "react-router-dom";
 
 export const Cart = () => {
-    const { Cart, amount } = useContext(CartContext);
-    
+  const { Cart, amount } = useContext(CartContext);
+
   return (
     <>
       <div className={style.container}>
@@ -89,11 +88,21 @@ export const Cart = () => {
           </div>
           <div className={style.button}>
             <button>Continue Shopping</button>
-            <button>Delivery Information</button>
+            <button>
+              {" "}
+              <Link
+                style={{
+                  textDecoration: "none",
+                }}
+                to="/products/Add_Address"
+              >
+                Delivery Information
+              </Link>
+            </button>
           </div>
         </div>
       </div>
       {/* <Footer/> */}
     </>
   );
-}
+};
