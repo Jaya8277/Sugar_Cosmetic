@@ -1,121 +1,122 @@
-*{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.mainContainer{
-    position:  fixed;
-    z-index: 99;
-    top: 0;
+.mainContainer {
+  position: fixed;
+  z-index: 99;
+  top: 0;
 }
-.box1{
-    display: flex;
-    background-color: #f8f9fa;
-    height: 70px;
-    margin: auto;
-    width: 110%;
-    align-items: center;
+.box1 {
+  display: flex;
+  background-color: #f8f9fa;
+  height: 70px;
+  margin: auto;
+  width: 110%;
+  align-items: center;
 }
-.box2>img{
-    margin-left: 25%; 
-    height: 40px;
-    width: 100%;
-    cursor: pointer;
-    margin-bottom: 20px;
+.box2 > img {
+  margin-left: 25%;
+  height: 40px;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
-.box3{
-    margin-left: 100px;
-    display: flex;
+.box3 {
+  margin-left: 100px;
+  display: flex;
 }
-.box3>input{
-    border-top-left-radius:50px;
-    border-bottom-left-radius: 50px;
-    height: 38px;
-    width: 575px;
-    padding-left: 25px;
-    border: none;
-    outline: none;
-    font-size: 14px;
+.box3 > input {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  height: 38px;
+  width: 575px;
+  padding-left: 25px;
+  border: none;
+  outline: none;
+  font-size: 14px;
 }
-.box3>button{
-    width: 128px;
-    height: 41px;
-    font-size: 17px;
-    background: #000;
-    color: rgb(236, 234, 234);
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-    cursor: pointer;
+.box3 > button {
+  width: 128px;
+  height: 41px;
+  font-size: 17px;
+  background: #000;
+  color: rgb(236, 234, 234);
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  cursor: pointer;
 }
-.box4{
-    margin-left:110px;
-    display: flex;
-    cursor: pointer;
+.box4 {
+  margin-left: 110px;
+  display: flex;
+  /* z-index: -1; */
+  cursor: pointer;
 }
-.box4>u{
-    font-size: 16px;
-    left: 5px;
+.box4 > u {
+  font-size: 16px;
+  left: 5px;
+  /* z-index: 1; */
 }
-.box5{
-    margin-left: 100px;
-    display: flex;
-    /* gap: 10px; */
-    cursor: pointer;
-   /* margin-top: 10px; */
+.box5 {
+  margin-left: 100px;
+  display: flex;
+  /* gap: 10px; */
+  cursor: pointer;
+  /* margin-top: 10px; */
 }
-.box5>span>img{
-    height: 18px;
-    width: 18px;
-    margin-top: 2px;
+.box5 > span > img {
+  height: 18px;
+  width: 18px;
+  margin-top: 2px;
 }
- .container{
+.container {
   height: 50px;
   width: 110%;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-  background:white;
- }
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  background: white;
+}
 .dropbtn {
-    cursor: pointer;
-    color: rgb(0, 0, 0);
-    font-size: 14px;
-    border: none;
-    margin-top:20px ;
-    margin-left: 40px;
-    transition: transform 0.5s, opacity 0.10s;
-  }
-  .dropbtn:hover{
-    transform: scale(1.05);
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .contents {
-    display: none;
-    position: absolute;
-    background-color: #fffdfd;
-    min-width: 130px;
-    margin-left: 30px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 99;
-  }
-  
-  .contents p {
-    color: rgb(46, 44, 44);
-    font-size: 13px;
-    text-decoration: none;
-    display: block;
-    cursor: pointer;
-    margin: 5px 1px 0px 1px;
-  }
-  
-  .contents p:hover {
-    color: black;
-    font-weight: 600;
-    
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  border: none;
+  margin-top: 20px;
+  margin-left: 40px;
+  transition: transform 0.5s, opacity 0.1s;
 }
-  
-  .dropdown:hover .contents {
-    display: block;
+.dropbtn:hover {
+  transform: scale(1.05);
 }
-  
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.contents {
+  display: none;
+  position: absolute;
+  background-color: #fffdfd;
+  min-width: 130px;
+  margin-left: 30px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 99;
+}
+
+.contents p {
+  color: rgb(46, 44, 44);
+  font-size: 13px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  margin: 5px 1px 0px 1px;
+}
+
+.contents p:hover {
+  color: black;
+  font-weight: 600;
+}
+
+.dropdown:hover .contents {
+  display: block;
+}

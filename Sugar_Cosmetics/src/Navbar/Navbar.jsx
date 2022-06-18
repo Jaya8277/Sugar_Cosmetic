@@ -5,6 +5,7 @@ import { IoBagHandle } from "react-icons/io5";
 import style from "./Navbar.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import { CartContext } from "../ContextApi/CartStorage";
+import Modal from "./Modal";
 
 export const Navbar = () => {
   const nav = useNavigate();
@@ -41,7 +42,7 @@ export const Navbar = () => {
           </div>
           <div className={style.box4}>
             <BsFillPersonFill fontSize="20px" />
-            <u>Login/Register</u>
+            <u><Modal/></u>
           </div>
           <div className={style.box5}>
             <span><MdFavorite fontSize="20px" /></span>
