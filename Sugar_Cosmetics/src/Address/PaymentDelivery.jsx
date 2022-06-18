@@ -34,7 +34,7 @@ const PaymentDelivery = () => {
                 height="15px"
               />
               <span style={{ marginLeft: "10px" }}>Cart Sub Total: </span>
-              <span style={{ marginLeft: "80px" }}>₹ {amount + 69}</span>
+              <span style={{ marginLeft: "80px" }}>₹ {amount}</span>
             </div>
             <div style={{ height: "30px", paddingTop: "5px" }}>
               <img
@@ -43,7 +43,7 @@ const PaymentDelivery = () => {
                 height="15px"
               />
               <span style={{ marginLeft: "10px" }}>Shipping Cost: </span>
-              <span style={{ marginLeft: "80px" }}>₹ 45.0</span>
+              <span style={{ marginLeft: "80px" }}>₹ 69.0</span>
             </div>
             <div style={{ height: "30px", paddingTop: "5px" }}>
               <img
@@ -63,7 +63,7 @@ const PaymentDelivery = () => {
                 height="15px"
               />
               <span style={{ marginLeft: "10px" }}>Amount Payable: </span>
-              <span style={{ marginLeft: "65px" }}>₹ </span>
+              <span style={{ marginLeft: "65px" }}>₹ {amount + 69} </span>
             </div>
             <div>
               <span>Including ₹ 200.69 in taxes</span>
@@ -216,6 +216,10 @@ const PaymentDelivery = () => {
                   width: "35%",
                   backgroundColor: "#fff",
                 }}
+                onClick={() => {
+                  navigate("/");
+                 
+                }}
               >
                 {" "}
                 Continue Shopping
@@ -230,7 +234,7 @@ const PaymentDelivery = () => {
                 }}
                 onClick={() => {
                   navigate("/products/payment");
-                  notify()
+                  notify();
                 }}
               >
                 Proceed to Payment Rs.<span>{amount + 69}</span>

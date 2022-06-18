@@ -1,9 +1,8 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { Navbar } from "../Navbar/Navbar";
-
 import "./Product.css";
 import { AiOutlineHeart } from "react-icons/ai";
 import { BsWhatsapp } from "react-icons/bs";
@@ -11,12 +10,15 @@ import { BsFacebook } from "react-icons/bs";
 import { BiMessageRoundedDetail } from "react-icons/bi";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { ImLinkedin2 } from "react-icons/im";
-
+import { CartContext } from "../ContextApi/CartStorage";
 import styles from "./Products.module.css";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 export const DivCard = () => {
+  const notify = () => toast("product Add sucussfully");
   const { _id } = useParams();
   const [products, setProducts] = useState([]);
+  const { Cart, setCart } = useContext(CartContext);
   useEffect(() => {
     axios
       .get(`https://sugarcosmetic201.herokuapp.com/products/get?_id=${_id}`)
@@ -32,6 +34,15 @@ export const DivCard = () => {
     let rand = Math.floor(Math.random() * 1000);
     setReview(rand);
   }, []);
+
+  const AddToCart = () => {
+    const cart = {
+      ...products,
+      quantity: 1,
+    };
+    setCart([cart, ...Cart]);
+    notify();
+  };
 
   return (
     <>
@@ -77,7 +88,14 @@ export const DivCard = () => {
               <p style={{ marginTop: "-10px", marginLeft: "30px" }}>
                 RS .{products.price}
               </p>
-              <button id="addbtn">Add to Cart </button>
+              <button
+                id="addbtn"
+                onClick={() => {
+                  AddToCart();
+                }}
+              >
+                Add to Cart{" "}
+              </button>
               <br />{" "}
               <a href="wishlist.html">
                 <AiOutlineHeart />

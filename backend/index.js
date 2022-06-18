@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(
   cors({
-    orgin: ["http://localhost:3000"],
+    orgin: ["https://sugarCosmetics.netlify.app/"],
   }),
 );
 app.use("/products", dataRouter);

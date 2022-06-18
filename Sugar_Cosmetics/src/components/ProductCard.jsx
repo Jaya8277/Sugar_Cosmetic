@@ -6,7 +6,6 @@ import styles from "./Products.module.css";
 import { useNavigate } from "react-router-dom";
 import { CartContext } from "../ContextApi/CartStorage";
 import { ToastContainer, toast } from "react-toastify";
-
 import "react-toastify/dist/ReactToastify.css";
 export const ProductCard = ({ name, rating, id, image, price, _id }) => {
   const notify = () => toast("product Add sucussfully");

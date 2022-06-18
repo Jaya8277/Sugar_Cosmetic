@@ -300,7 +300,7 @@ function Payment() {
                     notify()
                   }}
                 >
-                  Procced Check out Rs:{amount}
+                  Procced Check out Rs:{amount  + 69}
                 </button>
               </div>
             </div>
