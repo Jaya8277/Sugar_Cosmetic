@@ -44,32 +44,12 @@ export const Navbar = () => {
             <u>Login/Register</u>
           </div>
           <div className={style.box5}>
-            <p>
-              <MdFavorite fontSize="20px" />
-            </p>
-            <p>
-              <Link
-                style={{ color: "black", textDecoration: "none" }}
-                to="/Cart"
-              >
-                <IoBagHandle fontSize="20px" />
-              </Link>
-              <span
-                style={{
-                  border: "1px solid gray",
-                  borderRadius: "50px",
-                  fontSize: "14px",
-                }}
-              >
-                {Cart.length}
-              </span>
-            </p>
-            <p>
-              <img
-                src="	https://in.sugarcosmetics.com/desc-images/discountIcon.svg"
-                alt=""
-              />
-            </p>
+            <span><MdFavorite fontSize="20px" /></span>
+            <span><Link style={{color: "black",textDecoration: "none"}} to="/Cart"><IoBagHandle fontSize="20px"/></Link><span style={{border:'1px solid gray',borderRadius:"50px",fontSize:"14px"}}>10</span></span>
+            <span><img
+              src="	https://in.sugarcosmetics.com/desc-images/discountIcon.svg"
+              alt=""
+            /></span>
           </div>
         </div>
         <div className={style.container}>
@@ -85,7 +65,7 @@ export const Navbar = () => {
                 MAKEUP
               </Link>
             </h3>
-            <div className={style.content}>
+            <div className={style.contents}>
               <p>
                 <Link
                   style={{
@@ -133,7 +113,7 @@ export const Navbar = () => {
                 BRUSHES
               </Link>
             </h3>
-            <div className={style.content}>
+            <div className={style.contents}>
               <p>
                 <Link
                   style={{
@@ -170,7 +150,7 @@ export const Navbar = () => {
                 SKINCARE
               </Link>
             </h3>
-            <div className={style.content}>
+            <div className={style.contents}>
               <p>
                 <Link
                   style={{
@@ -273,7 +253,7 @@ export const Navbar = () => {
                 TRENDING
               </Link>
             </h3>
-            <div className={style.content}>
+            <div className={style.contents}>
               <p>
                 <Link
                   style={{
@@ -343,7 +323,7 @@ export const Navbar = () => {
                 BLOG
               </Link>
             </h3>
-            <div className={style.content}>
+            <div className={style.contents}>
               <p>
                 <Link
                   style={{
