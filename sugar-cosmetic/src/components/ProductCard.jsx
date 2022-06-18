@@ -66,9 +66,9 @@ export const ProductCard = ({  name,rating, id, image, price,_id }) => {
             >
               Add to Cart
             </button>
+            <ToastContainer />
           </div>
         </div>
-        <ToastContainer />
       </Flex>
     </>
   );
