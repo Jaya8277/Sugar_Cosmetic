@@ -1,17 +1,28 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 /* eslint-disable jsx-a11y/alt-text */
 import { Flex } from './Styled';
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useContext } from "react";
 import styles from "./Products.module.css";
 import {useNavigate } from 'react-router-dom';
+import { CartContext } from '../ContextApi/CartStorage';
 export const ProductCard = ({  name,rating, id, image, price,_id }) => {
    const nav = useNavigate();
+      const { Cart, setCart } = useContext(CartContext);
   const [review, setReview] = useState(0);
-  //  const { image, rating, price, name, id, catg } = item;
     useEffect(() => {
       let rand = Math.floor(Math.random() * 1000);
       setReview(rand);
     }, []);
+     
+    
+       const AddToCart = () => {
+         const Data = { name, rating, id, image, price, _id };
+         const cart = {
+           ...Data,
+           quantity: 1,
+         };
+         setCart([cart, ...Cart]);
+       };
   return (
     <>
       <Flex data-testid="single-product-item" key={id}>
@@ -42,7 +53,9 @@ export const ProductCard = ({  name,rating, id, image, price,_id }) => {
               />
             </button>
             {/*  onClick={() => handleClick(item)} */}
-            <button id={styles.btn}>Add to Cart</button>
+            <button id={styles.btn} onClick={() => AddToCart()}>
+              Add to Cart
+            </button>
           </div>
         </div>
       </Flex>
