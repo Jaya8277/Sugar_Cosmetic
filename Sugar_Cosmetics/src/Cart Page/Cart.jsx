@@ -8,11 +8,12 @@ import { BsTagFill } from "react-icons/bs";
 import { TbFileDollar } from "react-icons/tb";
 import { CartContext } from "../ContextApi/CartStorage";
 import MiniCart from "./MiniCart";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 export const Cart = () => {
   const { Cart, amount } = useContext(CartContext);
-
+  const navigate = useNavigate();
   return (
     <>
       <div className={style.container}>
@@ -87,17 +88,19 @@ export const Cart = () => {
             </div>
           </div>
           <div className={style.button}>
-            <button>Continue Shopping</button>
-            <button>
-              {" "}
-              <Link
-                style={{
-                  textDecoration: "none",
-                }}
-                to="/products/Add_Address"
-              >
-                Delivery Information
-              </Link>
+            <button
+              onClick={() => {
+                navigate("/");
+              }}
+            >
+              Continue Shopping
+            </button>
+            <button
+              onClick={() => {
+                navigate("/products/Add_Address");
+              }}
+            >
+              Delivery Information
             </button>
           </div>
         </div>

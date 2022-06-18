@@ -1,13 +1,16 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useEffect, useState,useContext } from "react";
-import {  useNavigate } from "react-router-dom";
+import React, { useEffect, useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./Payment.module.css";
 import { CartContext } from "../ContextApi/CartStorage";
 import style from "../Cart Page/Cart.module.css";
 import MiniCart from "../Cart Page/MiniCart";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function Payment() {
   const navigate = useNavigate();
-   const { Cart, amount, formData } = useContext(CartContext);
+  const notify = () => toast("Order placed on Cash on Delivery");
+  const { Cart, amount, formData } = useContext(CartContext);
   const [click, setClick] = useState(false);
   const [click2, setClick2] = useState(false);
   const [click3, setClick3] = useState(false);
@@ -48,7 +51,6 @@ function Payment() {
     setClick2(false);
     setClick3(false);
   };
-
 
   return (
     <>
@@ -289,11 +291,14 @@ function Payment() {
                   id={styles.btn1}
                   onClick={() => navigate("/products/addresss")}
                 >
-                  Delivary info
+                  Delivery info
                 </button>
                 <button
                   id={styles.btn2}
-                  onClick={() => navigate("/products/CheckoutPage")}
+                  onClick={() => {
+                    navigate("/products/CheckoutPage");
+                    notify()
+                  }}
                 >
                   Procced Check out Rs:{amount}
                 </button>

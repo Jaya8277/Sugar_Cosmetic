@@ -5,11 +5,12 @@ import { CartContext } from "../ContextApi/CartStorage";
 import { useNavigate } from "react-router-dom";
 import MiniCart from "../Cart Page/MiniCart";
 import style from "../Cart Page/Cart.module.css";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const PaymentDelivery = () => {
   const navigate = useNavigate();
   const { Cart, amount, formData } = useContext(CartContext);
-
+  const notify = () => toast("Proceeding to Payment");
   return (
     <>
       <div style={{ height: "155px" }}></div>
@@ -202,7 +203,7 @@ const PaymentDelivery = () => {
               <p style={{ marginTop: "15px" }}>Users Name :{formData.name}</p>
               <p>Phone Number :{formData.number}</p>
               <p>
-                formData :{formData.flatNumber},{formData.formData},
+                Address :{formData.flatNumber},{formData.formData},
                 {formData.city},{formData.country}
               </p>
               <p>Area pinCode : {formData.pincode}</p>
@@ -227,7 +228,10 @@ const PaymentDelivery = () => {
                   backgroundColor: "darkslategray",
                   color: "#fff",
                 }}
-                onClick={() => navigate("/products/payment")}
+                onClick={() => {
+                  navigate("/products/payment");
+                  notify()
+                }}
               >
                 Proceed to Payment Rs.<span>{amount + 69}</span>
               </button>

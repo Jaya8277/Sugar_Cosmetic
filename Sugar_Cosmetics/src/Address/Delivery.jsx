@@ -1,33 +1,28 @@
-import React, {useEffect, useState ,useContext} from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import styles from "./Delivery.module.css";
 import { CartContext } from "../ContextApi/CartStorage";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function Delivery() {
   const navigate = useNavigate();
-
-    const [show, setShow] = React.useState(false);
-    const { formData, setFormData } = useContext(CartContext);
-
+  const notify = () => toast("Address Add successfully");
+  const [show, setShow] = React.useState(false);
+  const { formData, setFormData } = useContext(CartContext);
 
   const handleChange = (e) => {
     const inputName = e.target.name;
- 
-   
-      setFormData({
-        ...formData,
-        [inputName]: e.target.value,
-      });
-    
+
+    setFormData({
+      ...formData,
+      [inputName]: e.target.value,
+    });
   };
-    localStorage.setItem("Address", JSON.stringify(formData));
-console.log(formData);
+  localStorage.setItem("Address", JSON.stringify(formData));
+  console.log(formData);
   const haddleSubmit = (e) => {
     e.preventDefault();
-  console.log("hai");
-
-  
-
+    console.log("hai");
   };
 
   return (
@@ -132,7 +127,12 @@ console.log(formData);
               <div>
                 <button className={styles.cancel}>Cancel</button>
               </div>
-              <div onClick={() => navigate("/products/addresss")}>
+              <div
+                onClick={() => {
+                  navigate("/products/addresss");
+                  notify()
+                }}
+              >
                 <input
                   type="submit"
                   className={styles.save}

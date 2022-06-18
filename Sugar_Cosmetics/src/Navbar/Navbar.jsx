@@ -5,6 +5,7 @@ import { IoBagHandle } from "react-icons/io5";
 import style from "./Navbar.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import { CartContext } from "../ContextApi/CartStorage";
+import { ToastContainer, toast } from "react-toastify";
 
 
 export const Navbar = () => {
@@ -428,7 +429,11 @@ export const Navbar = () => {
               <div id={style.form}>
                 <p id={style.head}>
                   <span
-                    style={{ marginRight: "50px", cursor: "pointer",color:"GrayText" }}
+                    style={{
+                      marginRight: "50px",
+                      cursor: "pointer",
+                      color: "GrayText",
+                    }}
                     onClick={() => setShow(false)}
                   >
                     <i class="fa-solid fa-xmark"></i>
@@ -497,6 +502,18 @@ export const Navbar = () => {
           </div>
         </>
       )}
+
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </>
   );
 };
