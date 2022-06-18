@@ -1,8 +1,12 @@
 import React from 'react'
+import SinginModal from './Modal'
 import "./Signin.css"
 
+
 const Signin = () => {
+    
     return (
+        
         <div>
 
             <div className="sublogin">

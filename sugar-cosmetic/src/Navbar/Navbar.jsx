@@ -1,10 +1,11 @@
 import React, { useState, useContext } from "react";
-import { BsFillPersonFill } from "react-icons/bs";
 import { MdFavorite } from "react-icons/md";
 import { IoBagHandle } from "react-icons/io5";
 import style from "./Navbar.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import { CartContext } from "../ContextApi/CartStorage";
+import SigninModal from "./Modal"
+
 
 export const Navbar = () => {
   const nav = useNavigate();
@@ -40,8 +41,9 @@ export const Navbar = () => {
             </button>
           </div>
           <div className={style.box4}>
-            <BsFillPersonFill fontSize="20px" />
-            <u>Login/Register</u>
+            {/* <BsFillPersonFill fontSize="20px" /> */}
+            <SigninModal/>
+            {/* <u>Login/Register</u> */}
           </div>
           <div className={style.box5}>
             <span><MdFavorite fontSize="20px" /></span>
