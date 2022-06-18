@@ -5,11 +5,12 @@ import { IoBagHandle } from "react-icons/io5";
 import style from "./Navbar.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import { CartContext } from "../ContextApi/CartStorage";
-import Modal from "./Modal";
+
 
 export const Navbar = () => {
   const nav = useNavigate();
   const [value, setValue] = useState("");
+    const [show, setShow] = useState(false);
   const { Cart } = useContext(CartContext);
   return (
     <>
@@ -40,7 +41,7 @@ export const Navbar = () => {
               Search
             </button>
           </div>
-          <div className={style.box4}>
+          <div className={style.box4} onClick={() => setShow(true)}>
             <BsFillPersonFill fontSize="20px" />
             <u>Login/Register</u>
           </div>
@@ -408,6 +409,94 @@ export const Navbar = () => {
           </div>
         </div>
       </div>
+
+      {show && (
+        <>
+          <div
+            className={style.bgmodal}
+            style={{ marginTop: "0px", zIndex: "99" }}
+          >
+            <div className={style.modalcontents}>
+              <div id={style.slide}>
+                <img
+                  id={style.bg}
+                  src="https://in.sugarcosmetics.com/Login_bg.svg"
+                  alt=""
+                />
+              </div>
+
+              <div id={style.form}>
+                <p id={style.head}>
+                  <span
+                    style={{ marginRight: "50px", cursor: "pointer",color:"GrayText" }}
+                    onClick={() => setShow(false)}
+                  >
+                    <i class="fa-solid fa-xmark"></i>
+                  </span>
+                  Login/Sign Up Using Phone
+                </p>
+                <div id={style.numHold}>
+                  <p id={style.code}>+91</p>
+                  <input type="text" id={style.number} maxlength="1" />
+                  <input type="text" id={style.number} maxlength="1" />
+                  <input type="text" id={style.number} maxlength="1" />
+                  <input type="text" id={style.number} maxlength="1" />
+                  <input type="text" id={style.number} maxlength="1" />
+                  <input type="text" id={style.number} maxlength="1" />
+                  <input type="text" id={style.number} maxlength="1" />
+                  <input type="text" id={style.number} maxlength="1" />
+                  <input type="text" id={style.number} maxlength="1" />
+                  <input type="text" id={style.number} maxlength="1" />
+                  <button id={style.request}>Request OTP</button>
+                </div>
+
+                <p id={style.enter}>
+                  Enter your phone number to request an OTP
+                </p>
+                <hr id={style.hr} />
+                <p id={style.digit}>
+                  Enter the 4 digit OTP received on your phone.
+                </p>
+
+                <div id={style.otpHold}>
+                  <input type="text" id={style.otp} maxlength="1" />
+                  <input type="text" id={style.otp} maxlength="1" />
+                  <input type="text" id={style.otp} maxlength="1" />
+                  <input type="text" id={style.otp} maxlength="1" />
+                </div>
+                <button id={style.verify}>Verify OTP</button>
+
+                <div id={style.condition}>
+                  <input type="checkbox" id={style.check} />
+                  <p id={style.whatsapp}>Get Important Updates on Whatsapp. </p>
+                  <a id={style.terms} href="">
+                    Terms and Conditions
+                  </a>
+                </div>
+
+                <div id={style.extra}>
+                  <p id={style.p1}>
+                    Registering for this site allows you to access your order
+                    status and history. Just fill in the fields below, and we'll
+                    get a new account set up for you in no time. We will only
+                    ask you for information necessary to make the purchase
+                    process faster and easier.
+                  </p>
+
+                  <div id={style.extraInfo}>
+                    <p id={style.p2}>
+                      By Signing up or logging in, you agree to our{" "}
+                    </p>
+                    <a href="" id={style.terms2}>
+                      Terms and Conditions
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
     </>
   );
 };

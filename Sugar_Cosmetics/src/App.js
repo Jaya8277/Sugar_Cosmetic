@@ -1,5 +1,4 @@
 import React from "react"
-import Modal from "./Navbar/Modal";
 import { MainRoutes } from "./Routes/MainRoutes";
 
 
