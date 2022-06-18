@@ -5,7 +5,10 @@ import React, { useEffect, useState,useContext } from "react";
 import styles from "./Products.module.css";
 import {useNavigate } from 'react-router-dom';
 import { CartContext } from '../ContextApi/CartStorage';
+ import { ToastContainer, toast } from "react-toastify";
+  import "react-toastify/dist/ReactToastify.css";
 export const ProductCard = ({  name,rating, id, image, price,_id }) => {
+   const notify = () => toast("Items Add sucussfully");
    const nav = useNavigate();
       const { Cart, setCart } = useContext(CartContext);
   const [review, setReview] = useState(0);
@@ -22,6 +25,7 @@ export const ProductCard = ({  name,rating, id, image, price,_id }) => {
            quantity: 1,
          };
          setCart([cart, ...Cart]);
+        
        };
   return (
     <>
@@ -53,11 +57,18 @@ export const ProductCard = ({  name,rating, id, image, price,_id }) => {
               />
             </button>
             {/*  onClick={() => handleClick(item)} */}
-            <button id={styles.btn} onClick={() => AddToCart()}>
+            <button
+              id={styles.btn}
+              onClick={() => {
+                AddToCart();
+                notify();
+              }}
+            >
               Add to Cart
             </button>
           </div>
         </div>
+        <ToastContainer />
       </Flex>
     </>
   );
