@@ -44,4 +44,4 @@ In this project we have tried to achieve a near to perfect clone of the original
 All pages are responsive yet, pages are not properly visible on small screen devices as we were having only 6 days to complete the project.
 
 # Contributers
-contributers--> A Goutham , shivam rathore , Shubham kashyap , jaya vishwakarma , Parimal Biswas
+contributers--> A Goutham , shivam rathore , Shubham kashyap , jaya vishwakarma , Parimal Biswas.
