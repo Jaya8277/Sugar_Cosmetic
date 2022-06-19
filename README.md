@@ -23,16 +23,16 @@ In this project we have done this using MERN stack and tried to make a dynamic a
 For storing user data we also used LocalStorage.
 
 # Images 🌟
-* Login:
+# Login:
 <br/>
 <img src="https://i.im.ge/2022/06/19/re7cJa.jpg" alt="3"/>
-* Home:
+# Home:
 <br/>
 <img src="https://i.im.ge/2022/06/19/re7PNr.jpg" alt="0" />
-* Product:
+# Product:
 <br/>
 <img src="https://i.im.ge/2022/06/19/re7Egc.jpg" alt="4" />
-* Cart:
+# Cart:
 <br/>
 <img src="https://i.im.ge/2022/06/19/re7bEx.jpg" alt="5" />
 
