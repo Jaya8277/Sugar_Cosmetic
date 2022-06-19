@@ -31,7 +31,7 @@ For storing user data we also used LocalStorage.
 <img src="https://i.im.ge/2022/06/19/re7PNr.jpg" alt="0" />
 * Product:
 <br/>
-<img src="https://camo.githubusercontent.com/ba4f8b16bcfc8b38822b7c303e216765a9e7e4a9075edeb4741d50576a3b9834/68747470733a2f2f692e696d2e67652f323032322f30362f31392f7265374567632e6a7067" alt="4" />
+<img src="https://i.im.ge/2022/06/19/re7Egc.jpg" alt="4" />
 * Cart:
 <br/>
 <img src="https://i.im.ge/2022/06/19/re7bEx.jpg" alt="5" />
