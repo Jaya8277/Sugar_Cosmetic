@@ -28,7 +28,7 @@ For storing user data we also used LocalStorage.
 <img src="https://i.ibb.co/nwRZCTz/3.png" alt="3"/>
 * Home:
 <br/>
-<img src="https://i.im.ge/2022/06/19/re7PNr.jpg" alt="re7PNr.jpg" />
+<img src="https://i.im.ge/2022/06/19/re7PNr.jpg" alt="0" />
 * Product:
 <br/>
 <img src="https://i.ibb.co/Cz07qQy/4.png" alt="4" />
