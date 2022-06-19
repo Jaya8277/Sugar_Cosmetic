@@ -20,8 +20,6 @@ In this project we have done this using MERN stack and tried to make a dynamic a
         <a href="https://expressjs.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express" width="55" height="55"/> </a>
 </p>
 
-For storing user data we also used LocalStorage.
-
 # Images 🌟
 # Login:
 <br/>
